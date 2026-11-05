@@ -24,6 +24,7 @@ const IMAGES = [
 
 const PHONE = "(203) 793-6369";
 const PHONE_HREF = "tel:+12037936369";
+const MAPS_URL = "https://maps.google.com/?cid=6907516781053040891&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA";
 
 /* ---------- Scroll reveal hook ---------- */
 function useReveal(options = {}) {
@@ -126,21 +127,15 @@ const ICONS = {
 
 /* ---------- Data ---------- */
 const SERVICES = [
-  { icon: ICONS.drip, title: "Emergency Leak Repair", desc: "Burst pipes and hidden leaks stopped fast — 24/7, any day of the year. We arrive prepared to fix it on the first visit.", img: IMAGES[0] },
-  { icon: ICONS.drain, title: "Drain Cleaning & Clogs", desc: "Kitchen, bath, or main line — powerful snaking and hydro-jetting that clears the blockage and keeps it clear.", img: IMAGES[1] },
-  { icon: ICONS.heater, title: "Water Heater Service", desc: "Repair, replacement, and tankless upgrades. Hot water restored the same day in most Danbury homes.", img: IMAGES[2] },
-  { icon: ICONS.wrench, title: "Pipe Repair & Repiping", desc: "Copper, PEX, and cast iron. From a single fitting to a whole-home repipe, done clean and to code.", img: IMAGES[3] },
-  { icon: ICONS.bath, title: "Bath & Kitchen Fixtures", desc: "Faucets, toilets, sinks, showers and garbage disposals installed right the first time.", img: IMAGES[4] },
-  { icon: ICONS.sewer, title: "Sewer & Main Line", desc: "Camera inspection, root removal, and trenchless options for the problems you can't see.", img: IMAGES[5] },
+  { icon: ICONS.wrench, title: "Plumbing Repair", desc: "General plumbing repairs. Call to talk through the problem.", img: IMAGES[3] },
+  { icon: ICONS.drain, title: "Drain Cleaning", desc: "Clogged and backed-up drains cleared.", img: IMAGES[1] },
+  { icon: ICONS.heater, title: "Water Heaters", desc: "Water heater repair and replacement.", img: IMAGES[2] },
 ];
 
 const WHY = [
-  { icon: ICONS.clock, title: "Truly 24/7", desc: "Open 24 hours, 7 days a week. Real plumbers answer — no voicemail roulette at 2 AM." },
-  { icon: ICONS.star, title: "4.7-Star Google Rating", desc: "Rated 4.7 across 13 Google reviews, and 12 of them are five stars." },
-  { icon: ICONS.dollar, title: "Upfront Flat Pricing", desc: "You approve the price before we touch a wrench. No surprise line items, ever." },
-  { icon: ICONS.shield, title: "Licensed & Insured", desc: "Fully licensed Connecticut plumbers. Every job backed by our workmanship guarantee." },
-  { icon: ICONS.truck, title: "Stocked Trucks", desc: "We carry the common parts, so most repairs finish in one visit — not three." },
-  { icon: ICONS.badge, title: "Local to Danbury", desc: "Right on Main Street. We know the old pipes, the hard water, and the town code." },
+  { icon: ICONS.clock, title: "Open 24 Hours", desc: "Open 24 hours a day, 7 days a week." },
+  { icon: ICONS.star, title: "4.7 Google Rating", desc: "Rated 4.7 from 13 Google reviews, and 12 of them are five stars." },
+  { icon: ICONS.pin, title: "241 Main St, Danbury", desc: "Find us at 241 Main St, Danbury, CT 06810." },
 ];
 
 const TESTIMONIALS = [
@@ -158,21 +153,11 @@ const STATS = [
   { num: "12", label: "Five-Star Reviews" },
 ];
 
-const PORTFOLIO = [
-  { img: IMAGES[6], tag: "Repipe", title: "Full Copper-to-PEX Repipe", meta: "Colonial home · Main St area · 2 days" },
-  { img: IMAGES[7], tag: "Water Heater", title: "Tankless System Upgrade", meta: "Endless hot water · Same-day install" },
-  { img: IMAGES[8], tag: "Remodel", title: "Master Bath Rough-In", meta: "New fixtures + drain relocation" },
-  { img: IMAGES[9], tag: "Emergency", title: "Burst Main Line Repair", meta: "Called 1 AM · Water on by 3 AM" },
-  { img: IMAGES[1], tag: "Drain", title: "Hydro-Jet Sewer Clearing", meta: "Root intrusion removed · Camera verified" },
-  { img: IMAGES[4], tag: "Kitchen", title: "Sink, Disposal & Faucet Set", meta: "Complete under-sink rebuild" },
-];
-
 const FAQ = [
-  { q: "Do you really answer at 3 in the morning?", a: "Yes. We are open 24 hours a day, every day of the week including holidays. Call (203) 793-6369 any time and you'll reach a real person who can dispatch a plumber." },
-  { q: "How much will my repair cost?", a: "We give you a flat, upfront price before any work begins. You approve it first — there are no hourly surprises and no hidden fees added at the end." },
-  { q: "What areas do you serve?", a: "Danbury and the surrounding Fairfield County communities — including Bethel, Brookfield, New Fairfield, Ridgefield, Newtown and Redding." },
-  { q: "Are you licensed and insured?", a: "Absolutely. We're fully licensed Connecticut plumbers and carry full liability insurance. Our workmanship is guaranteed." },
-  { q: "Can you handle both homes and businesses?", a: "Yes. We service single-family homes, condos, multi-family buildings, restaurants, and commercial properties throughout the Danbury area." },
+  { q: "What are your hours?", a: "We are open 24 hours a day, 7 days a week. Call (203) 793-6369." },
+  { q: "How much will my repair cost?", a: "Call (203) 793-6369 to describe the problem and ask about pricing." },
+  { q: "Where are you located?", a: "241 Main St, Danbury, CT 06810." },
+  { q: "Where can I read your reviews?", a: "On Google, where we are rated 4.7 from 13 reviews. Use the \"Read all reviews on Google\" link above." },
 ];
 
 /* ---------- Components ---------- */
@@ -187,7 +172,6 @@ function Nav() {
   const links = [
     ["Services", "services"],
     ["Why Us", "why"],
-    ["Work", "work"],
     ["Reviews", "reviews"],
     ["About", "about"],
     ["Contact", "contact"],
@@ -200,7 +184,7 @@ function Nav() {
   return (
     <>
       <div style={{ background: COLORS.accent, color: "#fff", textAlign: "center", fontSize: 13, padding: "7px 12px", fontWeight: 700, letterSpacing: ".02em", position: "relative", zIndex: 60 }}>
-        24/7 EMERGENCY PLUMBING IN DANBURY — CALL {PHONE} NOW
+        OPEN 24 HOURS IN DANBURY, CT — CALL {PHONE}
       </div>
       <header
         style={{
@@ -220,7 +204,7 @@ function Nav() {
             </div>
             <div style={{ lineHeight: 1.05 }}>
               <div style={{ color: "#fff", fontWeight: 800, fontSize: 17, letterSpacing: "-.02em" }}>Danbury Plumber</div>
-              <div style={{ color: "rgba(255,255,255,.55)", fontSize: 10.5, letterSpacing: ".14em", fontWeight: 600 }}>LICENSED · 24/7 · CT</div>
+              <div style={{ color: "rgba(255,255,255,.55)", fontSize: 10.5, letterSpacing: ".14em", fontWeight: 600 }}>OPEN 24 HOURS · CT</div>
             </div>
           </div>
 
@@ -288,32 +272,34 @@ function Hero() {
             Leak, Clog or No Hot Water?
             <br />
             <span style={{ background: `linear-gradient(100deg, ${COLORS.accent}, #FFB088)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              We're On The Way.
+              Give Us a Call.
             </span>
           </h1>
 
           <p style={{ ...a(200), fontSize: "clamp(1.02rem,2vw,1.22rem)", color: "rgba(255,255,255,.78)", lineHeight: 1.65, maxWidth: 580, margin: "0 0 34px" }}>
-            Danbury's 4.7-star rated plumbing team — answering the phone 24 hours a day, quoting flat prices upfront, and fixing it right the first time. Licensed, insured, and local to Main Street.
+            Danbury Plumber is a plumber at 241 Main St in Danbury, CT, open 24 hours a day. Rated 4.7 from 13 Google reviews.
           </p>
 
           <div style={{ ...a(300), display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 44 }}>
             <a href={PHONE_HREF} className="dp-btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 11, background: COLORS.accent, color: "#fff", padding: "17px 32px", borderRadius: 14, fontWeight: 800, fontSize: 16.5, textDecoration: "none", boxShadow: "0 14px 36px rgba(255,107,53,.42)" }}>
               <Icon path={ICONS.phone} size={19} color="#fff" /> Call {PHONE}
             </a>
-            <button
-              onClick={() => { const e = document.getElementById("contact"); if (e) window.scrollTo({ top: e.offsetTop - 70, behavior: "smooth" }); }}
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="dp-btn-ghost"
-              style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,.07)", color: "#fff", border: "1.5px solid rgba(255,255,255,.28)", padding: "17px 32px", borderRadius: 14, fontWeight: 700, fontSize: 16.5, cursor: "pointer" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,.07)", color: "#fff", border: "1.5px solid rgba(255,255,255,.28)", padding: "17px 32px", borderRadius: 14, fontWeight: 700, fontSize: 16.5, textDecoration: "none" }}
             >
-              Request Service →
-            </button>
+              Find Us on Google Maps →
+            </a>
           </div>
 
           <div style={{ ...a(420), display: "flex", flexWrap: "wrap", gap: "14px 34px" }}>
             {[
               [ICONS.star, "4.7 Rating · 13 Reviews"],
-              [ICONS.shield, "Licensed & Insured"],
-              [ICONS.dollar, "Upfront Flat Pricing"],
+              [ICONS.clock, "Open 24 Hours"],
+              [ICONS.pin, "241 Main St, Danbury"],
             ].map(([ic, t]) => (
               <div key={t} style={{ display: "flex", alignItems: "center", gap: 9, fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,.85)" }}>
                 <Icon path={ic} size={18} color={COLORS.sky} /> {t}
@@ -353,13 +339,13 @@ function Services() {
   return (
     <section id="services" style={{ background: COLORS.light, padding: "clamp(70px,9vw,110px) 20px" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto" }}>
-        <SectionHead kicker="WHAT WE DO" title="Every Plumbing Problem. One Phone Call." sub="Residential and commercial plumbing across Danbury and Fairfield County — handled by licensed pros with fully stocked trucks." />
+        <SectionHead kicker="WHAT WE DO" title="Plumbing Services in Danbury, CT" sub="Call to talk through your plumbing problem." />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(310px,1fr))", gap: 24 }}>
           {SERVICES.map((s, i) => (
             <Reveal key={s.title} delay={i * 90}>
               <div className="dp-card" style={{ background: "#fff", borderRadius: 20, overflow: "hidden", border: "1px solid #E4EBF2", height: "100%", display: "flex", flexDirection: "column" }}>
                 <div style={{ height: 178, overflow: "hidden", position: "relative" }}>
-                  <img src={s.img} alt={s.title} loading="lazy" className="dp-img" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  <img src={s.img} alt="" loading="lazy" className="dp-img" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                   <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(11,31,58,.55), transparent 55%)" }} />
                   <div style={{ position: "absolute", left: 18, bottom: 18, width: 46, height: 46, borderRadius: 13, background: "#fff", display: "grid", placeItems: "center", boxShadow: "0 8px 20px rgba(0,0,0,.18)" }}>
                     <Icon path={s.icon} size={24} />
@@ -369,7 +355,7 @@ function Services() {
                   <h3 style={{ fontSize: 19.5, fontWeight: 800, color: COLORS.navy, margin: "0 0 10px", letterSpacing: "-.02em" }}>{s.title}</h3>
                   <p style={{ fontSize: 14.8, lineHeight: 1.66, color: "#5A6B80", margin: "0 0 18px", flex: 1 }}>{s.desc}</p>
                   <a href={PHONE_HREF} className="dp-arrow" style={{ display: "inline-flex", alignItems: "center", gap: 7, color: COLORS.accent, fontWeight: 800, fontSize: 14.5, textDecoration: "none" }}>
-                    Get a Free Quote <span className="dp-arrow-i" style={{ display: "inline-block", transition: "transform .3s" }}>→</span>
+                    Call {PHONE} <span className="dp-arrow-i" style={{ display: "inline-block", transition: "transform .3s" }}>→</span>
                   </a>
                 </div>
               </div>
@@ -386,7 +372,7 @@ function Why() {
     <section id="why" style={{ background: COLORS.navy, padding: "clamp(70px,9vw,110px) 20px", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", width: 700, height: 700, borderRadius: "50%", background: `radial-gradient(circle, ${COLORS.sky}22, transparent 70%)`, bottom: -300, left: -200 }} />
       <div style={{ maxWidth: 1240, margin: "0 auto", position: "relative" }}>
-        <SectionHead light kicker="WHY DANBURY CALLS US" title="A 4.7 Isn't Luck. It's The Process." sub="13 Google reviews, 12 of them five stars. Here's what earns that." />
+        <SectionHead light kicker="AT A GLANCE" title="4.7 Stars on Google" sub="13 Google reviews, 12 of them five stars." />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 20 }}>
           {WHY.map((w, i) => (
             <Reveal key={w.title} delay={i * 80}>
@@ -404,65 +390,14 @@ function Why() {
         <Reveal delay={200}>
           <div style={{ marginTop: 56, background: `linear-gradient(115deg, ${COLORS.accent}, ${COLORS.accentDark})`, borderRadius: 24, padding: "clamp(34px,5vw,52px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 26, boxShadow: "0 24px 60px rgba(255,107,53,.28)" }}>
             <div style={{ minWidth: 260, flex: 1 }}>
-              <h3 style={{ color: "#fff", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 900, margin: "0 0 10px", letterSpacing: "-.025em" }}>Water where it shouldn't be? Don't wait.</h3>
-              <p style={{ color: "rgba(255,255,255,.9)", fontSize: 16, margin: 0, lineHeight: 1.6 }}>We're open right now. Real plumbers, real answers, no answering service.</p>
+              <h3 style={{ color: "#fff", fontSize: "clamp(1.4rem,3vw,2rem)", fontWeight: 900, margin: "0 0 10px", letterSpacing: "-.025em" }}>Plumbing problem? Give us a call.</h3>
+              <p style={{ color: "rgba(255,255,255,.9)", fontSize: 16, margin: 0, lineHeight: 1.6 }}>We're open 24 hours a day, 7 days a week.</p>
             </div>
             <a href={PHONE_HREF} className="dp-btn-white" style={{ display: "inline-flex", alignItems: "center", gap: 11, background: "#fff", color: COLORS.navy, padding: "18px 34px", borderRadius: 14, fontWeight: 900, fontSize: 17, textDecoration: "none", whiteSpace: "nowrap", boxShadow: "0 10px 30px rgba(0,0,0,.18)" }}>
               <Icon path={ICONS.phone} size={19} color={COLORS.navy} /> {PHONE}
             </a>
           </div>
         </Reveal>
-      </div>
-    </section>
-  );
-}
-
-function Portfolio() {
-  const [filter, setFilter] = useState("All");
-  const tags = ["All", ...Array.from(new Set(PORTFOLIO.map((p) => p.tag)))];
-  const shown = filter === "All" ? PORTFOLIO : PORTFOLIO.filter((p) => p.tag === filter);
-  return (
-    <section id="work" style={{ background: "#fff", padding: "clamp(70px,9vw,110px) 20px" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto" }}>
-        <SectionHead kicker="RECENT WORK" title="Real Jobs, Around The Corner" sub="A look at projects completed for homeowners and businesses right here in the Danbury area." />
-        <Reveal>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", marginBottom: 38 }}>
-            {tags.map((t) => (
-              <button
-                key={t}
-                onClick={() => setFilter(t)}
-                style={{
-                  padding: "9px 20px",
-                  borderRadius: 999,
-                  border: `1.5px solid ${filter === t ? COLORS.accent : "#DDE5EE"}`,
-                  background: filter === t ? COLORS.accent : "#fff",
-                  color: filter === t ? "#fff" : COLORS.navy,
-                  fontWeight: 700,
-                  fontSize: 14,
-                  cursor: "pointer",
-                  transition: "all .25s",
-                }}
-              >
-                {t}
-              </button>
-            ))}
-          </div>
-        </Reveal>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: 22 }}>
-          {shown.map((p, i) => (
-            <Reveal key={p.title} delay={i * 80}>
-              <div className="dp-port" style={{ position: "relative", borderRadius: 20, overflow: "hidden", height: 300, cursor: "pointer" }}>
-                <img src={p.img} alt={p.title} loading="lazy" className="dp-img" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(11,31,58,.93) 8%, rgba(11,31,58,.25) 55%, transparent)" }} />
-                <div style={{ position: "absolute", top: 16, left: 16, background: COLORS.accent, color: "#fff", fontSize: 11.5, fontWeight: 800, letterSpacing: ".08em", padding: "6px 13px", borderRadius: 999 }}>{p.tag.toUpperCase()}</div>
-                <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "22px 24px" }}>
-                  <h3 style={{ color: "#fff", fontSize: 20, fontWeight: 800, margin: "0 0 6px", letterSpacing: "-.02em" }}>{p.title}</h3>
-                  <p style={{ color: "rgba(255,255,255,.72)", fontSize: 14, margin: 0 }}>{p.meta}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );
@@ -488,7 +423,7 @@ function Testimonials() {
       style={{ background: COLORS.light, padding: "clamp(70px,9vw,110px) 20px", overflow: "hidden" }}
     >
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-        <SectionHead kicker="CUSTOMER REVIEWS" title="13 Google Reviews. 4.7 Stars." sub="Real reviews from Google, word for word." />
+        <SectionHead kicker="WHAT CUSTOMERS SAY" title="Written Reviews from Google" sub="Some of the written reviews on our Google listing." />
         <Reveal>
           <div style={{ position: "relative", background: "#fff", borderRadius: 24, border: "1px solid #E4EBF2", boxShadow: "0 24px 60px rgba(11,31,58,.09)", overflow: "hidden" }}>
             <div style={{ display: "flex", transition: "transform .7s cubic-bezier(.22,1,.36,1)", transform: `translateX(-${idx * 100}%)` }}>
@@ -564,7 +499,7 @@ function Testimonials() {
               </div>
             ))}
             <a
-              href="https://maps.google.com/?cid=6907516781053040891"
+              href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", gap: 8, background: COLORS.navy, color: "#fff", padding: "11px 20px", borderRadius: 999, fontWeight: 700, fontSize: 14, textDecoration: "none" }}
@@ -585,7 +520,7 @@ function About() {
         <Reveal>
           <div style={{ position: "relative" }}>
             <div style={{ borderRadius: 22, overflow: "hidden", boxShadow: "0 26px 60px rgba(11,31,58,.18)" }}>
-              <img src={IMAGES[3]} alt="Danbury Plumber team at work" loading="lazy" style={{ width: "100%", height: 460, objectFit: "cover", display: "block" }} />
+              <img src={IMAGES[3]} alt="" loading="lazy" style={{ width: "100%", height: 460, objectFit: "cover", display: "block" }} />
             </div>
             <div className="dp-float" style={{ position: "absolute", right: -14, bottom: -22, background: COLORS.navy, color: "#fff", padding: "22px 26px", borderRadius: 18, boxShadow: "0 18px 40px rgba(11,31,58,.3)", maxWidth: 210 }}>
               <div style={{ fontSize: 34, fontWeight: 900, color: COLORS.accent, lineHeight: 1 }}>4.7★</div>
@@ -598,20 +533,17 @@ function About() {
           <div>
             <div style={{ fontSize: 12.5, fontWeight: 800, letterSpacing: ".18em", color: COLORS.accent, marginBottom: 14 }}>ABOUT US</div>
             <h2 style={{ fontSize: "clamp(1.9rem,4.2vw,2.9rem)", fontWeight: 900, letterSpacing: "-.03em", lineHeight: 1.12, color: COLORS.navy, margin: "0 0 20px" }}>
-              Your Neighbors on Main Street — Ready Around The Clock
+              On Main Street in Danbury — Open 24 Hours
             </h2>
-            <p style={{ fontSize: 16.2, lineHeight: 1.78, color: "#5A6B80", margin: "0 0 18px" }}>
-              Danbury Plumber was built on a simple idea: plumbing emergencies don't respect business hours, so neither do we. Based at 241 Main Street, our licensed technicians serve Danbury and the surrounding Fairfield County towns 24 hours a day, every day of the year.
-            </p>
             <p style={{ fontSize: 16.2, lineHeight: 1.78, color: "#5A6B80", margin: "0 0 28px" }}>
-              We know these houses — the century-old cast iron, the hard water, the additions with three generations of patchwork pipe. That local knowledge means faster diagnoses, honest recommendations, and repairs that actually last. Every technician shows up in uniform, protects your floors, explains the fix in plain English, and leaves the space cleaner than they found it.
+              Danbury Plumber is located at 241 Main St, Danbury, CT 06810, and is open 24 hours a day, 7 days a week. Call {PHONE} or find us on Google Maps.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(170px,1fr))", gap: 16, marginBottom: 32 }}>
               {[
-                ["Licensed CT Plumbers", ICONS.badge],
-                ["Fully Insured Crews", ICONS.shield],
-                ["Flat, Upfront Pricing", ICONS.dollar],
-                ["Clean, Respectful Work", ICONS.star],
+                ["Open 24 Hours", ICONS.clock],
+                ["4.7 Google Rating", ICONS.star],
+                ["13 Google Reviews", ICONS.badge],
+                ["241 Main St, Danbury", ICONS.pin],
               ].map(([t, ic]) => (
                 <div key={t} style={{ display: "flex", alignItems: "center", gap: 11, background: COLORS.light, padding: "14px 16px", borderRadius: 13 }}>
                   <Icon path={ic} size={20} />
@@ -620,7 +552,7 @@ function About() {
               ))}
             </div>
             <a href={PHONE_HREF} className="dp-btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: COLORS.navy, color: "#fff", padding: "16px 30px", borderRadius: 13, fontWeight: 800, fontSize: 16, textDecoration: "none" }}>
-              <Icon path={ICONS.phone} size={18} color="#fff" /> Talk To A Plumber Now
+              <Icon path={ICONS.phone} size={18} color="#fff" /> Call {PHONE}
             </a>
           </div>
         </Reveal>
@@ -659,29 +591,11 @@ function Faq() {
 }
 
 function Contact() {
-  const [form, setForm] = useState({ name: "", phone: "", service: "Emergency Repair", msg: "" });
-  const [sent, setSent] = useState(false);
-  const submit = (e) => {
-    e.preventDefault();
-    setSent(true);
-  };
-  const input = {
-    width: "100%",
-    padding: "14px 16px",
-    borderRadius: 11,
-    border: "1.5px solid rgba(255,255,255,.18)",
-    background: "rgba(255,255,255,.07)",
-    color: "#fff",
-    fontSize: 15,
-    outline: "none",
-    boxSizing: "border-box",
-    fontFamily: "inherit",
-  };
   return (
     <section id="contact" style={{ background: COLORS.navy, padding: "clamp(70px,9vw,110px) 20px", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", width: 600, height: 600, borderRadius: "50%", background: `radial-gradient(circle, ${COLORS.accent}22, transparent 70%)`, top: -200, right: -150 }} />
       <div style={{ maxWidth: 1240, margin: "0 auto", position: "relative" }}>
-        <SectionHead light kicker="GET HELP NOW" title="Request Service — We'll Call You Right Back" sub="Or skip the form and call us directly. We're open 24 hours a day, every day." />
+        <SectionHead light kicker="GET HELP NOW" title="Call Us or Find Us on Google Maps" sub="We're open 24 hours a day, 7 days a week." />
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(310px,1fr))", gap: 26 }}>
           <Reveal>
@@ -691,7 +605,7 @@ function Contact() {
                   <Icon path={ICONS.phone} size={25} color="#fff" />
                 </div>
                 <div>
-                  <div style={{ color: "rgba(255,255,255,.85)", fontSize: 12.5, fontWeight: 800, letterSpacing: ".12em" }}>CALL 24/7</div>
+                  <div style={{ color: "rgba(255,255,255,.85)", fontSize: 12.5, fontWeight: 800, letterSpacing: ".12em" }}>CALL US</div>
                   <div style={{ color: "#fff", fontSize: 24, fontWeight: 900, letterSpacing: "-.02em" }}>{PHONE}</div>
                 </div>
               </a>
@@ -699,7 +613,6 @@ function Contact() {
               {[
                 { ic: ICONS.pin, label: "VISIT US", val: "241 Main St, Danbury, CT 06810" },
                 { ic: ICONS.clock, label: "HOURS", val: "Open 24 Hours — 7 Days a Week" },
-                { ic: ICONS.truck, label: "SERVICE AREA", val: "Danbury, Bethel, Brookfield, New Fairfield, Ridgefield, Newtown" },
               ].map((c) => (
                 <div key={c.label} className="dp-glass" style={{ display: "flex", gap: 16, alignItems: "center", background: "rgba(255,255,255,.055)", border: "1px solid rgba(255,255,255,.12)", padding: "22px 24px", borderRadius: 18 }}>
                   <div style={{ width: 46, height: 46, borderRadius: 13, background: "rgba(27,163,198,.18)", display: "grid", placeItems: "center", flexShrink: 0 }}>
@@ -716,37 +629,23 @@ function Contact() {
 
           <Reveal delay={140}>
             <div style={{ background: "rgba(255,255,255,.055)", border: "1px solid rgba(255,255,255,.12)", borderRadius: 20, padding: "clamp(26px,4vw,38px)" }}>
-              {sent ? (
-                <div style={{ textAlign: "center", padding: "36px 10px" }}>
-                  <div style={{ width: 66, height: 66, borderRadius: "50%", background: "rgba(74,222,128,.15)", display: "grid", placeItems: "center", margin: "0 auto 20px" }}>
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
-                  </div>
-                  <h3 style={{ color: "#fff", fontSize: 23, fontWeight: 800, margin: "0 0 10px" }}>Request Received</h3>
-                  <p style={{ color: "rgba(255,255,255,.72)", fontSize: 15.5, lineHeight: 1.65, margin: "0 0 24px" }}>
-                    Thanks{form.name ? `, ${form.name.split(" ")[0]}` : ""}! We'll call you back shortly. If it's urgent, call us now — we answer 24/7.
-                  </p>
-                  <a href={PHONE_HREF} style={{ display: "inline-flex", alignItems: "center", gap: 9, background: COLORS.accent, color: "#fff", padding: "14px 26px", borderRadius: 12, fontWeight: 800, textDecoration: "none" }}>
+              <div style={{ textAlign: "center", padding: "36px 10px" }}>
+                <div style={{ width: 66, height: 66, borderRadius: "50%", background: "rgba(27,163,198,.18)", display: "grid", placeItems: "center", margin: "0 auto 20px" }}>
+                  <Icon path={ICONS.pin} size={30} color={COLORS.sky} />
+                </div>
+                <h3 style={{ color: "#fff", fontSize: 23, fontWeight: 800, margin: "0 0 10px" }}>241 Main St, Danbury, CT 06810</h3>
+                <p style={{ color: "rgba(255,255,255,.72)", fontSize: 15.5, lineHeight: 1.65, margin: "0 0 24px" }}>
+                  Get directions or read our Google reviews on Google Maps.
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
+                  <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="dp-btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: COLORS.accent, color: "#fff", padding: "14px 26px", borderRadius: 12, fontWeight: 800, textDecoration: "none" }}>
+                    <Icon path={ICONS.pin} size={17} color="#fff" /> Open Google Maps →
+                  </a>
+                  <a href={PHONE_HREF} style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "rgba(255,255,255,.1)", color: "#fff", border: "1px solid rgba(255,255,255,.22)", padding: "14px 26px", borderRadius: 12, fontWeight: 800, textDecoration: "none" }}>
                     <Icon path={ICONS.phone} size={17} color="#fff" /> {PHONE}
                   </a>
                 </div>
-              ) : (
-                <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-                  <input required placeholder="Your Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} style={input} className="dp-input" />
-                  <input required type="tel" placeholder="Phone Number" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} style={input} className="dp-input" />
-                  <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })} style={{ ...input, cursor: "pointer" }} className="dp-input">
-                    {["Emergency Repair", "Drain Cleaning", "Water Heater", "Leak / Pipe Repair", "Fixture Install", "Sewer / Main Line", "Something Else"].map((o) => (
-                      <option key={o} value={o} style={{ color: "#111" }}>{o}</option>
-                    ))}
-                  </select>
-                  <textarea rows={4} placeholder="Briefly describe the problem..." value={form.msg} onChange={(e) => setForm({ ...form, msg: e.target.value })} style={{ ...input, resize: "vertical" }} className="dp-input" />
-                  <button type="submit" className="dp-btn-primary" style={{ background: COLORS.accent, color: "#fff", border: "none", padding: "17px", borderRadius: 13, fontWeight: 900, fontSize: 16.5, cursor: "pointer", boxShadow: "0 12px 30px rgba(255,107,53,.35)", fontFamily: "inherit" }}>
-                    Request My Service Call →
-                  </button>
-                  <p style={{ color: "rgba(255,255,255,.45)", fontSize: 12.5, textAlign: "center", margin: 0, lineHeight: 1.5 }}>
-                    No obligation. We'll confirm pricing before any work begins.
-                  </p>
-                </form>
-              )}
+              </div>
             </div>
           </Reveal>
         </div>
@@ -768,19 +667,13 @@ function Footer() {
               <div style={{ color: "#fff", fontWeight: 800, fontSize: 17 }}>Danbury Plumber</div>
             </div>
             <p style={{ fontSize: 14.3, lineHeight: 1.7, margin: 0 }}>
-              Licensed, insured, 24/7 plumbing services for Danbury, CT and all of Fairfield County. Rated 4.7 stars on Google.
+              Plumber in Danbury, CT. Open 24 hours. Rated 4.7 from 13 Google reviews.
             </p>
           </div>
           <div>
             <h4 style={{ color: "#fff", fontSize: 14, fontWeight: 800, letterSpacing: ".1em", margin: "0 0 14px" }}>SERVICES</h4>
             {SERVICES.map((s) => (
               <div key={s.title} style={{ fontSize: 14.2, marginBottom: 9 }}>{s.title}</div>
-            ))}
-          </div>
-          <div>
-            <h4 style={{ color: "#fff", fontSize: 14, fontWeight: 800, letterSpacing: ".1em", margin: "0 0 14px" }}>SERVICE AREA</h4>
-            {["Danbury", "Bethel", "Brookfield", "New Fairfield", "Ridgefield", "Newtown", "Redding"].map((c) => (
-              <div key={c} style={{ fontSize: 14.2, marginBottom: 9 }}>{c}, CT</div>
             ))}
           </div>
           <div>
@@ -794,7 +687,7 @@ function Footer() {
         </div>
         <div style={{ paddingTop: 24, display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "space-between", fontSize: 13.2 }}>
           <div>© {new Date().getFullYear()} Danbury Plumber. All rights reserved.</div>
-          <div>Licensed & Insured Connecticut Plumbing Contractor</div>
+          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}>View on Google Maps</a>
         </div>
       </div>
     </footer>
@@ -830,12 +723,14 @@ function StickyBar() {
       <a href={PHONE_HREF} style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 9, background: COLORS.accent, color: "#fff", padding: "14px", borderRadius: 12, fontWeight: 800, fontSize: 15.5, textDecoration: "none" }}>
         <Icon path={ICONS.phone} size={17} color="#fff" /> Call Now
       </a>
-      <button
-        onClick={() => { const e = document.getElementById("contact"); if (e) window.scrollTo({ top: e.offsetTop - 60, behavior: "smooth" }); }}
-        style={{ flex: 1, background: "rgba(255,255,255,.1)", color: "#fff", border: "1px solid rgba(255,255,255,.22)", padding: "14px", borderRadius: 12, fontWeight: 800, fontSize: 15.5, cursor: "pointer", fontFamily: "inherit" }}
+      <a
+        href={MAPS_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(255,255,255,.1)", color: "#fff", border: "1px solid rgba(255,255,255,.22)", padding: "14px", borderRadius: 12, fontWeight: 800, fontSize: 15.5, textDecoration: "none" }}
       >
-        Book Service
-      </button>
+        Directions
+      </a>
     </div>
   );
 }
@@ -864,16 +759,12 @@ export default function DanburyPlumberSite() {
         .dp-card{transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s, border-color .4s;}
         .dp-card:hover{transform:translateY(-8px);box-shadow:0 24px 54px rgba(11,31,58,.14);border-color:${COLORS.accent}55;}
         .dp-img{transition:transform .7s cubic-bezier(.22,1,.36,1);}
-        .dp-card:hover .dp-img,.dp-port:hover .dp-img{transform:scale(1.08);}
+        .dp-card:hover .dp-img{transform:scale(1.08);}
         .dp-arrow:hover .dp-arrow-i{transform:translateX(5px);}
         .dp-glass{transition:background .35s, transform .35s, border-color .35s;}
         .dp-glass:hover{background:rgba(255,255,255,.1) !important;transform:translateY(-5px);border-color:rgba(255,255,255,.26) !important;}
-        .dp-port{transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s;}
-        .dp-port:hover{transform:translateY(-7px);box-shadow:0 24px 54px rgba(11,31,58,.22);}
         .dp-contact{transition:transform .3s, box-shadow .3s;}
         .dp-contact:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(255,107,53,.42) !important;}
-        .dp-input::placeholder{color:rgba(255,255,255,.42);}
-        .dp-input:focus{border-color:${COLORS.accent} !important;background:rgba(255,255,255,.11) !important;}
         .dp-float{animation:dpFloat 4.5s ease-in-out infinite;}
         @keyframes dpFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
         @media(max-width:860px){
@@ -887,7 +778,6 @@ export default function DanburyPlumberSite() {
       <Hero />
       <Services />
       <Why />
-      <Portfolio />
       <Testimonials />
       <About />
       <Faq />
