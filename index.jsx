@@ -136,7 +136,7 @@ const SERVICES = [
 
 const WHY = [
   { icon: ICONS.clock, title: "Truly 24/7", desc: "Open 24 hours, 7 days a week. Real plumbers answer — no voicemail roulette at 2 AM." },
-  { icon: ICONS.star, title: "Perfect 5.0 Rating", desc: "13 out of 13 customers rated us 5 stars. Not an accident — it's the standard." },
+  { icon: ICONS.star, title: "4.7-Star Google Rating", desc: "Rated 4.7 across 13 Google reviews, and 12 of them are five stars." },
   { icon: ICONS.dollar, title: "Upfront Flat Pricing", desc: "You approve the price before we touch a wrench. No surprise line items, ever." },
   { icon: ICONS.shield, title: "Licensed & Insured", desc: "Fully licensed Connecticut plumbers. Every job backed by our workmanship guarantee." },
   { icon: ICONS.truck, title: "Stocked Trucks", desc: "We carry the common parts, so most repairs finish in one visit — not three." },
@@ -144,18 +144,18 @@ const WHY = [
 ];
 
 const TESTIMONIALS = [
-  { name: "Marcus D.", role: "Homeowner · Danbury", text: "Called at 11 PM with water pouring through the kitchen ceiling. They picked up immediately and had someone here inside the hour. Calm, clean, and the price was exactly what they quoted. Lifesavers.", stars: 5 },
-  { name: "Elena R.", role: "Homeowner · Danbury", text: "Our water heater died on a Sunday. Replaced the same day with a better unit than we expected and they hauled the old one away. Genuinely the easiest contractor experience we've had.", stars: 5 },
-  { name: "Tom B.", role: "Property Manager", text: "I manage six buildings in the area and they're the only plumber I call now. Reliable, fair, and they explain everything to tenants without any drama. Five stars is earned.", stars: 5 },
-  { name: "Priya S.", role: "Homeowner · Danbury", text: "Main line backed up twice last year with another company. These guys camera'd the line, found the root intrusion, and fixed it properly. Zero problems since.", stars: 5 },
-  { name: "Greg A.", role: "Restaurant Owner", text: "Grease clog on a Friday night with a full dining room. They cleared it in under an hour and never made a mess in the kitchen. Absolute professionals.", stars: 5 },
+  { name: "Erika J.", role: "Google review", text: "Had been dealing with low water pressure throughout the whole house for months and finally decided to stop ignoring it after the shower upstairs got so weak it was basically just a trickle. Called Danbury Plumber after a neighbor recommended them, and they had someone out the next morning within the window they quoted, which already put them ahead of the last plumber I'd dealt with. The tech did an actual diagnostic instead of just guessing, checked the pressure at the main, tested a few fixtures, and traced the problem back to a failing pressure regulator that was probably original to the house. He showed me the part, explained what it does and why it goes bad, and gave me a flat price for the replacement before he started any work. No hourly meter running, no vague estimates that balloon at the end. The swap took maybe an hour and a half, and he also noticed my shutoff valve by the meter was seized up and mentioned I'd want to replace that at some point before it became an emergency, but didn't try to tack it onto the current job. Pressure throughout the house came back immediately and it's been rock solid for the two months since. What I appreciated most was that he actually explained things in a way that didn't feel condescending, I'm not handy but I walked away understanding what was wrong and what he fixed, which is more than I can say for most service calls I've had. Clean work, honest pricing, and they showed up when they said they would. That's really all you want from a plumber.", stars: 5 },
+  { name: "Rogelio B.", role: "Google review", text: "I recently used Danbury Plumber for a plumbing issue at my house, and the whole experience was handled the way you hope these jobs go. I needed someone reliable, knowledgeable, and easy to work with, and that is exactly how it felt once the technician arrived. He showed up on time, inspected everything carefully, and explained the problem in plain language without making it sound bigger than it was. Skilled plumber, clear communication, clean work. He checked the affected area, went over the repair options, and got right into the work with a steady and professional approach. The repair itself was done with real attention to detail. Nothing felt rushed, nothing felt sloppy, and the area was kept neat while the work was being completed. Licensed team, prompt service, quality workmanship. I also appreciated that he answered my questions directly and made it clear he understood plumbing systems well, not just the one issue in front of him. Once the job was finished, everything was tested properly and working the way it should. It is not always easy to find a plumbing company that shows up, communicates well, and handles the work with care, but that was my experience here. Danbury Plumber gave me dependable service, professional results, and peace of mind that the repair was done right. I would absolutely recommend them to anyone looking for plumbing service from a company that values honest work and strong customer care.", stars: 5 },
+  { name: "Craig D.", role: "Google review", text: "We had a water heater issue at our house near Candlewood Lake and needed someone who could come out without dragging it into a three-day ordeal. They checked the unit, explained what failed, and got the hot water running again the same day. I liked that they were straight with us about repair versus replacement instead of pushing the expensive option right away. The work area was clean when they left, and everything has been working normally since. Really solid experience.", stars: 5 },
+  { name: "Pedro F.", role: "Google review", text: "We called Danbury Plumber after our water heater started leaking from the bottom, and I knew it wasn’t something I wanted to mess around with because the floor around it was already wet and the basement was starting to smell damp. I had no idea if it could be repaired or if the whole thing needed to be replaced, so I was expecting a headache right from the start. The plumber came out, checked the tank, the connections, the shutoff, and explained pretty clearly that the unit was too far gone to make a repair worth it. Not what I wanted to hear, but fair. He gave us the price before doing anything, picked up the new water heater, and got everything swapped out the same day. The work looked clean too. Pipes lined up right, no leaks around the fittings, old tank hauled away. He even waited and tested the hot water before leaving, which I appreciated because I’ve had workers rush out before and then you find something wrong later. It was one of those home repairs you hate paying for, but at least it was handled correctly and without a bunch of nonsense. I highly recommend them!", stars: 5 },
+  { name: "James P.", role: "Google review", text: "Water started backing up in the basement sink and I noticed the shutoff valve near the line was old and barely turning, so I figured this wasn’t going to be a quick fix. After dealing with a different plumber before who just snaked it and left, I called Danbury Plumber to actually handle the drain cleaning the right way. Bill took the time to ask questions about the setup, the valve, and how long it had been happening, which already felt different. The crew came out and didn’t rush it, they checked the full line, cleared the blockage properly, and made sure everything was flowing before packing up. They even adjusted the valve so it worked smoothly again, which I didn’t expect but made a big difference. Being a residential home with an older system, I appreciated how careful they were moving around and keeping things clean. The workmanship stood out, thorough, consistent, and done without cutting corners. Prices were fair for the amount of work and time they spent, especially compared to the quick in-and-out jobs I’ve had before. Overall customer experience felt honest, detailed, and handled by a crew that actually cares about fixing the problem long term. Highly recommend them!", stars: 5 },
 ];
 
 const STATS = [
-  { num: "5.0", label: "Star Rating" },
-  { num: "24/7", label: "Always Open" },
-  { num: "13", label: "5-Star Reviews" },
-  { num: "1hr", label: "Avg. Response" },
+  { num: "4.7", label: "Google Rating" },
+  { num: "24/7", label: "Open 24 Hours" },
+  { num: "13", label: "Google Reviews" },
+  { num: "12", label: "Five-Star Reviews" },
 ];
 
 const PORTFOLIO = [
@@ -293,7 +293,7 @@ function Hero() {
           </h1>
 
           <p style={{ ...a(200), fontSize: "clamp(1.02rem,2vw,1.22rem)", color: "rgba(255,255,255,.78)", lineHeight: 1.65, maxWidth: 580, margin: "0 0 34px" }}>
-            Danbury's 5.0-star plumbing team — answering the phone 24 hours a day, quoting flat prices upfront, and fixing it right the first time. Licensed, insured, and local to Main Street.
+            Danbury's 4.7-star rated plumbing team — answering the phone 24 hours a day, quoting flat prices upfront, and fixing it right the first time. Licensed, insured, and local to Main Street.
           </p>
 
           <div style={{ ...a(300), display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 44 }}>
@@ -311,7 +311,7 @@ function Hero() {
 
           <div style={{ ...a(420), display: "flex", flexWrap: "wrap", gap: "14px 34px" }}>
             {[
-              [ICONS.star, "5.0 Rating · 13 Reviews"],
+              [ICONS.star, "4.7 Rating · 13 Reviews"],
               [ICONS.shield, "Licensed & Insured"],
               [ICONS.dollar, "Upfront Flat Pricing"],
             ].map(([ic, t]) => (
@@ -386,7 +386,7 @@ function Why() {
     <section id="why" style={{ background: COLORS.navy, padding: "clamp(70px,9vw,110px) 20px", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", width: 700, height: 700, borderRadius: "50%", background: `radial-gradient(circle, ${COLORS.sky}22, transparent 70%)`, bottom: -300, left: -200 }} />
       <div style={{ maxWidth: 1240, margin: "0 auto", position: "relative" }}>
-        <SectionHead light kicker="WHY DANBURY CALLS US" title="A Perfect 5.0 Isn't Luck. It's The Process." sub="Thirteen reviews. Thirteen five-star ratings. Here's exactly what earns that every single time." />
+        <SectionHead light kicker="WHY DANBURY CALLS US" title="A 4.7 Isn't Luck. It's The Process." sub="13 Google reviews, 12 of them five stars. Here's what earns that." />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 20 }}>
           {WHY.map((w, i) => (
             <Reveal key={w.title} delay={i * 80}>
@@ -471,11 +471,15 @@ function Portfolio() {
 function Testimonials() {
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  useEffect(() => { setExpanded(false); }, [idx]);
   useEffect(() => {
-    if (paused) return;
-    const t = setInterval(() => setIdx((i) => (i + 1) % TESTIMONIALS.length), 5200);
+    // Real reviews are long enough to need time to read; never rotate away
+    // from one the visitor has opened.
+    if (paused || expanded) return;
+    const t = setInterval(() => setIdx((i) => (i + 1) % TESTIMONIALS.length), 12000);
     return () => clearInterval(t);
-  }, [paused]);
+  }, [paused, expanded]);
   return (
     <section
       id="reviews"
@@ -484,11 +488,11 @@ function Testimonials() {
       style={{ background: COLORS.light, padding: "clamp(70px,9vw,110px) 20px", overflow: "hidden" }}
     >
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-        <SectionHead kicker="CUSTOMER REVIEWS" title="13 Reviews. 13 Five-Star Ratings." sub="Our neighbors in Danbury say it better than we ever could." />
+        <SectionHead kicker="CUSTOMER REVIEWS" title="13 Google Reviews. 4.7 Stars." sub="Real reviews from Google, word for word." />
         <Reveal>
           <div style={{ position: "relative", background: "#fff", borderRadius: 24, border: "1px solid #E4EBF2", boxShadow: "0 24px 60px rgba(11,31,58,.09)", overflow: "hidden" }}>
             <div style={{ display: "flex", transition: "transform .7s cubic-bezier(.22,1,.36,1)", transform: `translateX(-${idx * 100}%)` }}>
-              {TESTIMONIALS.map((t) => (
+              {TESTIMONIALS.map((t, slideIdx) => (
                 <div key={t.name} style={{ minWidth: "100%", padding: "clamp(34px,5vw,58px)", boxSizing: "border-box", textAlign: "center" }}>
                   <div style={{ display: "flex", justifyContent: "center", gap: 4, marginBottom: 22 }}>
                     {Array.from({ length: t.stars }).map((_, i) => (
@@ -497,9 +501,36 @@ function Testimonials() {
                       </svg>
                     ))}
                   </div>
-                  <p style={{ fontSize: "clamp(1.05rem,2.2vw,1.35rem)", lineHeight: 1.72, color: COLORS.navy, fontWeight: 500, margin: "0 0 28px", maxWidth: 720, marginLeft: "auto", marginRight: "auto" }}>
+                  <p
+                    style={{
+                      fontSize: "clamp(1rem,1.9vw,1.15rem)",
+                      lineHeight: 1.7,
+                      color: COLORS.navy,
+                      fontWeight: 500,
+                      margin: "0 0 14px",
+                      maxWidth: 720,
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      textAlign: "left",
+                      ...(expanded && slideIdx === idx
+                        ? {}
+                        : { display: "-webkit-box", WebkitLineClamp: 7, WebkitBoxOrient: "vertical", overflow: "hidden" }),
+                    }}
+                  >
                     “{t.text}”
                   </p>
+                  {t.text.length > 320 && slideIdx === idx ? (
+                    <button
+                      type="button"
+                      onClick={() => setExpanded((e) => !e)}
+                      aria-expanded={expanded}
+                      style={{ background: "none", border: "none", padding: 0, margin: "0 0 24px", color: COLORS.navy, fontWeight: 700, fontSize: 14.5, textDecoration: "underline", cursor: "pointer" }}
+                    >
+                      {expanded ? "Show less" : "Read full review"}
+                    </button>
+                  ) : (
+                    <div style={{ height: 14 }} />
+                  )}
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 13 }}>
                     <div style={{ width: 46, height: 46, borderRadius: "50%", background: `linear-gradient(135deg,${COLORS.navyLight},${COLORS.sky})`, color: "#fff", display: "grid", placeItems: "center", fontWeight: 800, fontSize: 17 }}>
                       {t.name[0]}
@@ -527,11 +558,19 @@ function Testimonials() {
 
         <Reveal delay={150}>
           <div style={{ marginTop: 34, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14 }}>
-            {["Google Verified", "5.0 Average", "100% Recommend"].map((b) => (
+            {["4.7 Average on Google", "13 Google Reviews", "12 of 13 Are Five Stars"].map((b) => (
               <div key={b} style={{ display: "flex", alignItems: "center", gap: 8, background: "#fff", border: "1px solid #E4EBF2", padding: "11px 20px", borderRadius: 999, fontWeight: 700, fontSize: 14, color: COLORS.navy }}>
                 <Icon path={ICONS.shield} size={17} color={COLORS.sky} /> {b}
               </div>
             ))}
+            <a
+              href="https://maps.google.com/?cid=6907516781053040891"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "flex", alignItems: "center", gap: 8, background: COLORS.navy, color: "#fff", padding: "11px 20px", borderRadius: 999, fontWeight: 700, fontSize: 14, textDecoration: "none" }}
+            >
+              Read all reviews on Google →
+            </a>
           </div>
         </Reveal>
       </div>
@@ -549,8 +588,8 @@ function About() {
               <img src={IMAGES[3]} alt="Danbury Plumber team at work" loading="lazy" style={{ width: "100%", height: 460, objectFit: "cover", display: "block" }} />
             </div>
             <div className="dp-float" style={{ position: "absolute", right: -14, bottom: -22, background: COLORS.navy, color: "#fff", padding: "22px 26px", borderRadius: 18, boxShadow: "0 18px 40px rgba(11,31,58,.3)", maxWidth: 210 }}>
-              <div style={{ fontSize: 34, fontWeight: 900, color: COLORS.accent, lineHeight: 1 }}>5.0★</div>
-              <div style={{ fontSize: 13.5, color: "rgba(255,255,255,.75)", marginTop: 7, lineHeight: 1.5 }}>Perfect rating from every customer who reviewed us.</div>
+              <div style={{ fontSize: 34, fontWeight: 900, color: COLORS.accent, lineHeight: 1 }}>4.7★</div>
+              <div style={{ fontSize: 13.5, color: "rgba(255,255,255,.75)", marginTop: 7, lineHeight: 1.5 }}>Average rating across 13 Google reviews.</div>
             </div>
           </div>
         </Reveal>
@@ -729,7 +768,7 @@ function Footer() {
               <div style={{ color: "#fff", fontWeight: 800, fontSize: 17 }}>Danbury Plumber</div>
             </div>
             <p style={{ fontSize: 14.3, lineHeight: 1.7, margin: 0 }}>
-              Licensed, insured, 24/7 plumbing services for Danbury, CT and all of Fairfield County. Rated 5.0 stars by our neighbors.
+              Licensed, insured, 24/7 plumbing services for Danbury, CT and all of Fairfield County. Rated 4.7 stars on Google.
             </p>
           </div>
           <div>
